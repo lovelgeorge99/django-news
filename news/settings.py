@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','192.168.2.11','django-api-news.herokuapp.com','localhost','192.168.1.7']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','django-api-news.herokuapp.com','localhost','192.168.1.7']
 
 
 # Application definition
