@@ -1,0 +1,14 @@
+image: docker:stable
+
+variables: 
+  IMAGE_NAME: "djangonewstest"
+
+services:
+  - docker:20.10.16-dind
+
+build:
+  stage: build
+  script:
+    - docker build -t lovelgeorge/$IMAGE_NAME .
+    - docker login -u lovelgeorge -p dckr_pat_cvrX8N9zR-9hkyrRK7jsPQ7cgjU
+    - docker push lovelgeorge/$IMAGE_NAME
